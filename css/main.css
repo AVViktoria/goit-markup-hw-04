@@ -152,8 +152,25 @@ p {
 .header-list .item:last-child {
   margin-right: 0;
 }
+
+.header-list .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .accent.link {
   color: var(--main-txt-cl);
+}
+
+.header-list .link:hover,
+.header-list .link:focus {
+  color: var(--accent-cl);
+}
+
+.header-list .icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /*
@@ -163,6 +180,16 @@ p {
 */
 
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/main-page/hero/hero-bcg-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   padding: 200px 0px;
   color: var(--main-white-cl);
   background-color: var(--dark-bg-cl);
@@ -221,6 +248,29 @@ p {
 .about .item {
   margin-right: 30px;
   width: 270px;
+}
+.about .item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--secondary-bg-cl);
+}
+
+.about .icon-antenna::before {
+  background-image: url('../images/icons.svg/antenna.svg');
+}
+.about .icon-clock::before {
+  background-image: url('../images/icons.svg/clock.svg');
+}
+.about .icon-diagram::before {
+  background-image: url('../images/icons.svg/diagram.svg');
+}
+.about .icon-astronaut::before {
+  background-image: url('../images/icons.svg/astronaut.svg');
 }
 .about .item:last-child {
   margin-right: 0;
@@ -292,6 +342,57 @@ p {
 
 .team-position {
   text-align: center;
+}
+
+/*
+============================
+| Clients / Клиенты
+============================
+*/
+.clients {
+  padding: 94px 0;
+  background-color: var(--main-white-cl);
+}
+
+.clients .item {
+  margin-right: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients .item:last-child {
+  margin-right: 0;
+}
+.clients .section-title {
+  font-style: normal;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+}
+.clients .item {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients .link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  fill: #afb1b8;
+  cursor: pointer;
+}
+.clients .link:hover,
+.clients .link:focus {
+  fill: var(--accent-cl);
+}
+
+.clients .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 106px;
+  height: 60px;
 }
 
 /*
@@ -378,6 +479,15 @@ Portfolio
 .projects .list {
   flex-wrap: wrap;
 }
+.projects .link {
+  display: inline-block;
+}
+
+.projects .link:hover {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
 .projects .sign-group {
   padding: 20px 24px;
 }
