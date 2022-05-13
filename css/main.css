@@ -471,18 +471,22 @@ p {
 ============================
 */
 .footer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
   padding-top: 60px;
   padding-bottom: 57px;
   background-color: var(--dark-bg-cl);
 }
-
-.footer .container {
+.full-footer {
+  display: flex;
+  align-items: baseline;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.footer-container {
   margin-right: 70px;
 }
-
 .footer .logo {
   padding: 0px;
   margin-bottom: 20px;
@@ -526,24 +530,30 @@ p {
 }
 .icon-footer .icon-list {
   display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.icon-footer .icon-item {
+.icon-item:not(:last-child) {
   margin-right: 10px;
-  justify-content: center;
-  align-items: center;
 }
 .icon-footer .link {
-  color: var(--main-white-cl);
+  display: flex;
+  width: 44px;
+  height: 44px;
+  /* color: var(--main-white-cl); */
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
+  justify-content: center;
+  align-items: center;
+  /* background-repeat: no-repeat;
+  background-position: center; */
   cursor: pointer;
 }
+
 .icon-footer .link:hover,
 .icon-footer .link:focus {
   fill: var(--accent-cl);
